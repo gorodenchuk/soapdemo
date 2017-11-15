@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.133 sec <<< FAILURE! - in TestSuite
+Test6(smartbear.SampleWebServiceTestSuit)  Time elapsed: 0.184 sec  <<< FAILURE!
+java.lang.AssertionError: Actual 'X' value isn`t equal to expected expected [6.324555320336759] but found [4.47213595499958]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at smartbear.SampleWebServiceTestSuit.Test6(SampleWebServiceTestSuit.java:76)
+
