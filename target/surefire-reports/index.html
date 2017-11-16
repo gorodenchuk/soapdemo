@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Test_runner">
-              <span class="suite-name border-failed">Test runner</span>
+              <span class="suite-name border-passed">Test runner</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Test_runner">
-                    <span>C:\Users\Nazar_Gorodenchuk\Desktop\soap2\src\test\resources\testng.xml</span>
+                    <span>C:\Users\Nazar_Gorodenchuk\workplace\soap2\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Test_runner" class="hide-methods failed suite-Test_runner"> (hide)</a> <!-- hide-methods failed suite-Test_runner -->
-                      <a href="#" panel-name="suite-Test_runner" class="show-methods failed suite-Test_runner"> (show)</a> <!-- show-methods failed suite-Test_runner -->
-                    </span>
-                    <div class="method-list-content failed suite-Test_runner">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_runner" title="smartbear.SampleWebServiceTestSuit" hash-for-method="Test6">Test6</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Test_runner -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -139,6 +125,11 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Test_runner" title="smartbear.SampleWebServiceTestSuit" hash-for-method="Test5">Test5</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_runner" title="smartbear.SampleWebServiceTestSuit" hash-for-method="Test6">Test6</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Test_runner -->
                   </li>
                 </ul>
@@ -151,28 +142,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Test_runner" class="panel Test_runner">
-          <div class="suite-Test_runner-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">smartbear.SampleWebServiceTestSuit</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Test6">
-                  </a> <!-- Test6 -->
-                  <span class="method-name">Test6</span>
-                  <div class="stack-trace">java.lang.AssertionError: Actual &apos;X&apos; value isn`t equal to expected expected [6.324555320336759] but found [4.47213595499958]
-	at smartbear.SampleWebServiceTestSuit.Test6(SampleWebServiceTestSuit.java:76)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test_runner-class-failed -->
           <div class="suite-Test_runner-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -214,12 +183,19 @@
                   <span class="method-name">Test5</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test6">
+                  </a> <!-- Test6 -->
+                  <span class="method-name">Test6</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Test_runner-class-passed -->
         </div> <!-- panel Test_runner -->
         <div panel-name="test-xml-Test_runner" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Nazar_Gorodenchuk\Desktop\soap2\src\test\resources\testng.xml</span>
+            <span class="header-content">C:\Users\Nazar_Gorodenchuk\workplace\soap2\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -272,32 +248,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test1')
 data.setCell(0, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(0, 3, 253);
+data.setCell(0, 3, 316);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Test6')
+data.setCell(1, 1, 'Test4')
 data.setCell(1, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(1, 3, 153);
+data.setCell(1, 3, 300);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Test5')
 data.setCell(2, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(2, 3, 147);
+data.setCell(2, 3, 231);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Test2')
+data.setCell(3, 1, 'Test6')
 data.setCell(3, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(3, 3, 147);
+data.setCell(3, 3, 169);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Test4')
+data.setCell(4, 1, 'Test3')
 data.setCell(4, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(4, 3, 137);
+data.setCell(4, 3, 153);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Test3')
+data.setCell(5, 1, 'Test2')
 data.setCell(5, 2, 'smartbear.SampleWebServiceTestSuit')
-data.setCell(5, 3, 132);
+data.setCell(5, 3, 152);
 window.suiteTableData['Test_runner']= { tableData: data, tableDiv: 'times-div-Test_runner'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 969 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Test_runner">
               </div> <!-- times-div-Test_runner -->
             </div> <!-- times-div -->
@@ -330,25 +306,23 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test2</span>
-                <span class="method-start">253 ms</span>
+                <span class="method-start">316 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test3</span>
-                <span class="method-start">400 ms</span>
+                <span class="method-start">468 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test4</span>
-                <span class="method-start">532 ms</span>
+                <span class="method-start">621 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Test5</span>
-                <span class="method-start">669 ms</span>
+                <span class="method-start">921 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Test6</span>
-                <span class="method-start">816 ms</span>
+                <span class="method-start">1152 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

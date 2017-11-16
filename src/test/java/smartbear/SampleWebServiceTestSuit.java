@@ -3,15 +3,14 @@ package smartbear;
 import com.smartbear.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.List;
 
 public class SampleWebServiceTestSuit {
 
     static SampleWebService sampleWebService = new SampleWebService();
     static SampleWebServiceSoap port = sampleWebService.getSampleWebServiceSoap();
-
+    static Testhelper testhelper = new Testhelper();
 
     @Test
     public static void Test1() {
@@ -20,9 +19,9 @@ public class SampleWebServiceTestSuit {
 
     @Test
     public static void Test2() {
-        System.out.println("-------------------------------");
-        System.out.println("Current time: " + port.getCurrentTime());
-        System.out.println("-------------------------------");
+        XMLGregorianCalendar date = port.getCurrentTime();
+
+        Assert.assertTrue(testhelper.checkingDateformat(date), "Response format doesn`t match");
     }
 
     @Test
@@ -37,15 +36,8 @@ public class SampleWebServiceTestSuit {
     public static void Test4() {
         ArrayOfInt arrayOfInt = port.getArray();
         List<Integer> value = arrayOfInt.getInt();
-        List<Integer> expected = new ArrayList<>();
 
-        Integer i = 0;
-        while (i < 10) {
-            expected.add(i);
-            ++i;
-        }
-
-        Assert.assertTrue(value.toString().contentEquals(expected.toString())?true:false,
+        Assert.assertTrue(value.toString().contentEquals(testhelper.setDataToCollection(10).toString())?true:false,
                 "Actual array size isn`t equal to expected");
     }
 
@@ -72,7 +64,7 @@ public class SampleWebServiceTestSuit {
         SampleTestClass sampleTestClass = port.getSampleObject(40);
 
         Assert.assertEquals(sampleTestClass.getName(), "TestComplete Sample", "Actual name isn`t equal to expected");
-        Assert.assertEquals( sampleTestClass.getX(), 4.47213595499958,"Actual 'X' value isn`t equal to expected");
-        Assert.assertEquals(sampleTestClass.getY(), 400.0, "Actual 'Y' value isn`t equal to expected");
+        Assert.assertEquals( sampleTestClass.getX(), 6.324555320336759,"Actual 'X' value isn`t equal to expected");
+        Assert.assertEquals(sampleTestClass.getY(), 1600.0, "Actual 'Y' value isn`t equal to expected");
     }
 }
