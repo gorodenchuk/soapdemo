@@ -8,6 +8,3 @@ wsimport -d c:\Users\Nazar_Gorodenchuk\Desktop\soap2\src\main\java http://secure
 
 documentation:
 https://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html#Example
-
-usefull article:
-http://ru.khroliz.com/2013/07/java-soap.html
